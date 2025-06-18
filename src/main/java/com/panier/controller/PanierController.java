@@ -1,7 +1,7 @@
 package com.panier.controller;
 
+import com.panier.model.PanierRequest;
 import com.panier.service.PanierService;
-import com.panier.model.TypeProduit;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -16,8 +16,8 @@ public class PanierController {
     }
 
     @PostMapping("/calcul")
-    public double calculerPanier(@RequestBody Map<TypeProduit, Integer> produits,
-                                 @RequestParam String clientId) {
-        return panierService.calculerTotal(clientId, produits);
+    public Map<String, Double> calculerPanier(@RequestBody PanierRequest request) {
+        double total = panierService.calculerTotal(request.getClientId(), request.getProduits());
+        return Map.of("total", total);
     }
 }
