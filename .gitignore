@@ -1,0 +1,40 @@
+# --- Java ---
+*.class
+*.log
+*.war
+*.ear
+
+# --- Maven ---
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# --- IntelliJ IDEA ---
+.idea/
+*.iml
+*.iws
+out/
+*.iml
+
+# --- Mac OS ---
+.DS_Store
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Logs ---
+*.log
+
+# --- Temp files ---
+*.swp
+*.bak
+*.tmp
+*.old
+
+# --- VSCode (si tu l’utilises aussi) ---
+.vscode/
